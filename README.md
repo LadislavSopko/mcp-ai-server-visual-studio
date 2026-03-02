@@ -5,10 +5,10 @@
 [![Install from Marketplace](https://img.shields.io/badge/Install-VS%20Marketplace-purple.png)](https://marketplace.visualstudio.com/items?itemName=LadislavSopko.mcpserverforvs)
 [![VS 2022](https://img.shields.io/badge/VS-2022%20%7C%202026-purple.png)](https://visualstudio.microsoft.com/)
 [![Free](https://img.shields.io/badge/Price-Free-green.png)](https://marketplace.visualstudio.com/items?itemName=LadislavSopko.mcpserverforvs)
-[![Tools](https://img.shields.io/badge/MCP%20Tools-20-blue.png)](https://modelcontextprotocol.io/)
-[![Website](https://img.shields.io/badge/Website-0ics.com-blue.png)](https://www.0ics.com/static/vs-mcp.html)
+[![Tools](https://img.shields.io/badge/MCP%20Tools-39-blue.png)](https://modelcontextprotocol.io/)
+[![Website](https://img.shields.io/badge/Website-vs--mcp.example4.ai-blue.png)](https://vs-mcp.example4.ai)
 
-The first and only Visual Studio extension that gives AI assistants access to the C# compiler (Roslyn) through the Model Context Protocol. 20 tools. 12 powered by Roslyn. Semantic understanding, not text matching.
+The first and only Visual Studio extension that gives AI assistants access to the C# compiler (Roslyn) and the Visual Studio Debugger through the Model Context Protocol. 39 tools. 12 powered by Roslyn. 19 debugging tools (Preview). Semantic understanding, not text matching.
 
 ## Install
 
@@ -18,7 +18,7 @@ Or search for **"MCP AI Server"** in Visual Studio Extensions Manager.
 
 ### See it in Action
 
-[![Watch Demo Video](https://www.0ics.com/static/youtube-min.jpeg)](https://youtu.be/fYV4oqY9n5g)
+[![Watch Demo Video](https://vs-mcp.example4.ai/static/youtube-min.jpeg)](https://youtu.be/fYV4oqY9n5g)
 
 *Click to watch on YouTube*
 
@@ -28,7 +28,7 @@ Or search for **"MCP AI Server"** in Visual Studio Extensions Manager.
 
 AI coding tools (Claude Code, Codex CLI, Gemini CLI, OpenCode, Cursor, Copilot, Windsurf...) operate at the filesystem level — they read text, run grep, execute builds. They don't understand your code the way Visual Studio does.
 
-MCP AI Server bridges this gap by exposing IntelliSense-level intelligence as MCP tools. Your AI assistant gets the same semantic understanding that powers F12 (Go to Definition), Shift+F12 (Find All References), and safe refactoring.
+MCP AI Server bridges this gap by exposing IntelliSense-level intelligence and the Visual Studio Debugger as MCP tools. Your AI assistant gets the same semantic understanding that powers F12 (Go to Definition), Shift+F12 (Find All References), safe refactoring — and now runtime debugging.
 
 ### What becomes possible:
 
@@ -38,10 +38,11 @@ MCP AI Server bridges this gap by exposing IntelliSense-level intelligence as MC
 | "Rename ProcessDocument" | sed breaks ProcessDocumentAsync | Roslyn renames 23 call sites safely |
 | "What implements IDocumentService?" | Impossible via grep | Full inheritance tree with interfaces |
 | "What calls AuthenticateUser?" | Text matches, can't tell direction | Precise call graph: callers + callees |
+| "Why is ProcessOrder returning null?" | Reads code, guesses | Sets breakpoint, inspects actual runtime values |
 
 ---
 
-## 20 Tools
+## 20 Stable Tools
 
 ### Semantic Navigation (Roslyn-powered)
 | Tool | Description |
@@ -80,6 +81,49 @@ MCP AI Server bridges this gap by exposing IntelliSense-level intelligence as MC
 | `GetActiveFile` | Current file and cursor position |
 | `GetSelection` / `CheckSelection` | Read active text selection |
 | `GetLoggingStatus` / `SetLogLevel` | Extension diagnostics |
+
+---
+
+## 19 Debugging Tools (Preview)
+
+Your AI assistant can now debug your .NET code at runtime through the Visual Studio Debugger. Set breakpoints, step through code, inspect variables, attach to Docker containers and WSL processes.
+
+### Debug Control (10 tools)
+| Tool | Description |
+|------|-------------|
+| `debug_start` | Start debugging (F5). Fire-and-forget |
+| `debug_stop` | Stop debugging session |
+| `debug_get_mode` | Current mode: Design, Running, or Break |
+| `debug_break` | Pause the running application |
+| `debug_continue` | Resume execution |
+| `debug_step` | Step over/into/out |
+| `immediate_execute` | Execute expression with side effects |
+| `debug_list_transports` | List transports (Default, Docker, WSL, SSH...) |
+| `debug_list_processes` | List processes on a transport |
+| `debug_attach` | Attach to a running process |
+
+### Debug Inspection (5 tools)
+| Tool | Description |
+|------|-------------|
+| `debug_get_callstack` | Call stack of current thread |
+| `debug_get_locals` | Local variables (tree-navigable) |
+| `debug_evaluate` | Evaluate expression / drill into variable tree |
+| `output_read` | Read VS Output window (Build, Debug, Tests) |
+| `error_list_get` | Errors and warnings from VS Error List |
+
+### Breakpoint Management (4 tools)
+| Tool | Description |
+|------|-------------|
+| `breakpoint_set` | Set breakpoint by file+line or function name |
+| `breakpoint_remove` | Remove breakpoint |
+| `breakpoint_list` | List all breakpoints |
+| `exception_settings_set` | Configure break-on-exception |
+
+### AI Debugging Guide
+
+Complete reference for AI agents — all 19 tools, 10 workflows, Docker & WSL setup, polling patterns, and best practices.
+
+**[Download AI Debugging Guide (.md)](https://vs-mcp.example4.ai/ai-debugging-guide.md)** — add it to your AI's context for full debugging capabilities.
 
 ---
 
@@ -230,6 +274,8 @@ args = ["mcp-remote", "http://localhost:3011/sdk/"]
 
 **Tools** → **MCP Server Settings**
 
+![VS-MCP Settings](https://vs-mcp.example4.ai/static/settings.jpg)
+
 | Setting | Default | Description |
 |---------|---------|-------------|
 | **Port** | 3001 | Server port (configurable per VS instance) |
@@ -242,11 +288,11 @@ Changes apply on next server start.
 
 ## vs. Other Approaches
 
-| Approach | Symbol Search | Inheritance | Call Graph | Safe Rename |
-|----------|:---:|:---:|:---:|:---:|
-| **MCP AI Server (Roslyn)** | Semantic | Full tree | Callers + Callees | Compiler-verified |
-| AI Agent (grep/fs) | Text match | No | No | Text replace |
-| Other MCP servers | No | No | No | No |
+| Approach | Symbol Search | Inheritance | Call Graph | Safe Rename | Debugging |
+|----------|:---:|:---:|:---:|:---:|:---:|
+| **MCP AI Server (Roslyn + Debugger)** | Semantic | Full tree | Callers + Callees | Compiler-verified | Breakpoints + Step + Inspect |
+| AI Agent (grep/fs) | Text match | No | No | Text replace | No |
+| Other MCP servers | No | No | No | No | No |
 
 ---
 
@@ -266,7 +312,7 @@ Found a bug or have an idea? [Open an issue](https://github.com/LadislavSopko/mc
 
 ## About
 
-**[0ics srl](https://0ics.it)** — Italian software company specializing in AI-powered development tools.
+**[0ics srl](https://0ics.it)** — Italian software company specializing in AI-powered development tools. Part of the [example4.ai](https://example4.ai) ecosystem.
 
 Built by **Ladislav Sopko** — 30 years of software development, from assembler to enterprise .NET.
 
