@@ -5,10 +5,10 @@
 [![Install from Marketplace](https://img.shields.io/badge/Install-VS%20Marketplace-purple.png)](https://marketplace.visualstudio.com/items?itemName=LadislavSopko.mcpserverforvs)
 [![VS 2022](https://img.shields.io/badge/VS-2022%20%7C%202026-purple.png)](https://visualstudio.microsoft.com/)
 [![Free](https://img.shields.io/badge/Price-Free-green.png)](https://marketplace.visualstudio.com/items?itemName=LadislavSopko.mcpserverforvs)
-[![Tools](https://img.shields.io/badge/MCP%20Tools-39-blue.png)](https://modelcontextprotocol.io/)
+[![Tools](https://img.shields.io/badge/MCP%20Tools-40-blue.png)](https://modelcontextprotocol.io/)
 [![Website](https://img.shields.io/badge/Website-vs--mcp.example4.ai-blue.png)](https://vs-mcp.example4.ai)
 
-The first and only Visual Studio extension that gives AI assistants access to the C# compiler (Roslyn) and the Visual Studio Debugger through the Model Context Protocol. 39 tools. 12 powered by Roslyn. 19 debugging tools (Preview). Semantic understanding, not text matching.
+The first and only Visual Studio extension that gives AI assistants access to the C# compiler (Roslyn) and the Visual Studio Debugger through the Model Context Protocol. 40 tools. 13 powered by Roslyn. 19 debugging tools (Preview). Semantic understanding, not text matching.
 
 ## Install
 
@@ -42,7 +42,7 @@ MCP AI Server bridges this gap by exposing IntelliSense-level intelligence and t
 
 ---
 
-## 20 Stable Tools
+## 21 Stable Tools
 
 ### Semantic Navigation (Roslyn-powered)
 | Tool | Description |
@@ -59,6 +59,11 @@ MCP AI Server bridges this gap by exposing IntelliSense-level intelligence and t
 | `GetInheritance` | Full type hierarchy: base types, derived types, interfaces |
 | `GetMethodCallers` | Which methods call this method (call graph UP) |
 | `GetMethodCalls` | Which methods this method calls (call graph DOWN) |
+
+### Code Analysis (Roslyn-powered)
+| Tool | Description |
+|------|-------------|
+| `GetDiagnostics` | Compiler errors & warnings without building — Roslyn background analysis |
 
 ### Refactoring (Roslyn-powered)
 | Tool | Description |
