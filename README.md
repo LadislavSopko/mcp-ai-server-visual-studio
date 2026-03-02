@@ -123,7 +123,7 @@ Your AI assistant can now debug your .NET code at runtime through the Visual Stu
 
 Complete reference for AI agents — all 19 tools, 10 workflows, Docker & WSL setup, polling patterns, and best practices.
 
-**[Download AI Debugging Guide (.md)](https://vs-mcp.example4.ai/ai-debugging-guide.md)** — add it to your AI's context for full debugging capabilities.
+**[Download AI Debugging Guide (.md)](https://raw.githubusercontent.com/LadislavSopko/mcp-ai-server-visual-studio/main/site/ai-debugging-guide.md)** — add it to your AI's context for full debugging capabilities.
 
 ---
 
@@ -312,7 +312,7 @@ Found a bug or have an idea? [Open an issue](https://github.com/LadislavSopko/mc
 
 ## About
 
-**[0ics srl](https://0ics.it)** — Italian software company specializing in AI-powered development tools. Part of the [example4.ai](https://example4.ai) ecosystem.
+**[0ics srl](https://www.0ics.com/)** — Italian software company specializing in AI-powered development tools. Part of the [example4.ai](https://example4.ai) ecosystem.
 
 Built by **Ladislav Sopko** — 30 years of software development, from assembler to enterprise .NET.
 
