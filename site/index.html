@@ -667,63 +667,63 @@ h2 .highlight-debug {
     <tbody>
       <tr>
         <td>Find symbol by name</td>
-        <td><span class="partial">&x26A0; text match</span></td>
+        <td><span class="partial">&#x26A0; text match</span></td>
         <td><span class="check">&check; semantic</span></td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
       </tr>
       <tr>
         <td>Go to definition</td>
-        <td><span class="partial">&x26A0; heuristic</span></td>
+        <td><span class="partial">&#x26A0; heuristic</span></td>
         <td><span class="check">&check; exact</span></td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
       </tr>
       <tr>
         <td>Find all usages</td>
-        <td><span class="partial">&x26A0; grep (noisy)</span></td>
+        <td><span class="partial">&#x26A0; grep (noisy)</span></td>
         <td><span class="check">&check; compiler-verified</span></td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
       </tr>
       <tr>
         <td>Inheritance hierarchy</td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
         <td><span class="check">&check; full tree</span></td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
       </tr>
       <tr>
         <td>Call graph</td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
         <td><span class="check">&check; callers + callees</span></td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
       </tr>
       <tr>
         <td>Safe rename</td>
-        <td><span class="cross">&x2717; text replace</span></td>
+        <td><span class="cross">&#x2717; text replace</span></td>
         <td><span class="check">&check; Roslyn refactor</span></td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
       </tr>
       <tr>
         <td>Runtime debugging</td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
         <td><span class="check">&check; breakpoints + step + inspect</span></td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
       </tr>
       <tr>
         <td>Attach to Docker/WSL</td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
         <td><span class="check">&check; transports</span></td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
       </tr>
       <tr>
         <td>Async test execution</td>
-        <td><span class="partial">&x26A0; CLI only</span></td>
+        <td><span class="partial">&#x26A0; CLI only</span></td>
         <td><span class="check">&check; with status</span></td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
       </tr>
       <tr>
         <td>Path WSL &harr; Windows</td>
-        <td><span class="cross">&x2717; manual</span></td>
+        <td><span class="cross">&#x2717; manual</span></td>
         <td><span class="check">&check; automatic</span></td>
-        <td><span class="cross">&x2717;</span></td>
+        <td><span class="cross">&#x2717;</span></td>
       </tr>
       <tr>
         <td>Build solution</td>
@@ -743,7 +743,7 @@ h2 .highlight-debug {
   <h3 style="color:var(--text-muted);font-size:0.9rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;">&rarr; "Find WhisperFactory in my solution"</h3>
   <div class="vs-block">
     <div class="vs-panel bad">
-      <div class="vs-panel-header">&x274C; Without VS-MCP (grep)</div>
+      <div class="vs-panel-header">&#x274C; Without VS-MCP (grep)</div>
       <pre><span class="cmd">$ grep -rn "WhisperFactory" --include="*.cs"</span>
 
 src/WhisperFactory.cs:16:  public class WhisperFactory
@@ -778,13 +778,13 @@ src/Tests/MockFactory.cs:4:    // WhisperFactory mock
   <h3 style="color:var(--text-muted);font-size:0.9rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;margin-top:3rem;">&rarr; "Rename ProcessDocument to HandleDocument"</h3>
   <div class="vs-block">
     <div class="vs-panel bad">
-      <div class="vs-panel-header">&x274C; Without VS-MCP (find &amp; replace)</div>
+      <div class="vs-panel-header">&#x274C; Without VS-MCP (find &amp; replace)</div>
       <pre><span class="cmd">$ sed -i 's/ProcessDocument/HandleDocument/g' **/*.cs</span>
 
-<span class="error">&x2717; ProcessDocumentAsync &rarr; HandleDocumentAsync (BROKEN!)
-&x2717; "ProcessDocument" in log strings (WRONG!)
-&x2717; IProcessDocument interface (MISSED!)
-&x2717; XML doc references (STALE!)</span>
+<span class="error">&#x2717; ProcessDocumentAsync &rarr; HandleDocumentAsync (BROKEN!)
+&#x2717; "ProcessDocument" in log strings (WRONG!)
+&#x2717; IProcessDocument interface (MISSED!)
+&#x2717; XML doc references (STALE!)</span>
 
 <span class="comment">&rarr; Text replace doesn't understand symbols
 &rarr; Breaks method names that START with same text
@@ -856,7 +856,7 @@ src/Tests/MockFactory.cs:4:    // WhisperFactory mock
   <h3 style="color:var(--text-muted);font-size:0.9rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;">&rarr; "Why is ProcessOrder returning null?"</h3>
   <div class="vs-block">
     <div class="vs-panel bad">
-      <div class="vs-panel-header">&x274C; Without VS-MCP</div>
+      <div class="vs-panel-header">&#x274C; Without VS-MCP</div>
       <pre><span class="cmd">AI reads the code, guesses the issue:</span>
 
 <span class="error">"Based on reading the code, it might be because
