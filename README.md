@@ -5,10 +5,10 @@
 [![Install from Marketplace](https://img.shields.io/badge/Install-VS%20Marketplace-purple.png)](https://marketplace.visualstudio.com/items?itemName=LadislavSopko.mcpserverforvs)
 [![VS 2022](https://img.shields.io/badge/VS-2022%20%7C%202026-purple.png)](https://visualstudio.microsoft.com/)
 [![Free](https://img.shields.io/badge/Price-Free-green.png)](https://marketplace.visualstudio.com/items?itemName=LadislavSopko.mcpserverforvs)
-[![Tools](https://img.shields.io/badge/MCP%20Tools-40-blue.png)](https://modelcontextprotocol.io/)
+[![Tools](https://img.shields.io/badge/MCP%20Tools-41-blue.png)](https://modelcontextprotocol.io/)
 [![Website](https://img.shields.io/badge/Website-vs--mcp.example4.ai-blue.png)](https://vs-mcp.example4.ai)
 
-The first and only Visual Studio extension that gives AI assistants access to the C# compiler (Roslyn) and the Visual Studio Debugger through the Model Context Protocol. 40 tools. 13 powered by Roslyn. 19 debugging tools (Preview). Semantic understanding, not text matching.
+The first and only Visual Studio extension that gives AI assistants access to the C# compiler (Roslyn) and the Visual Studio Debugger through the Model Context Protocol. 41 tools. 13 powered by Roslyn. 19 debugging tools (Preview). Semantic understanding, not text matching.
 
 ## Install
 
@@ -42,7 +42,7 @@ MCP AI Server bridges this gap by exposing IntelliSense-level intelligence and t
 
 ---
 
-## 21 Stable Tools
+## 22 Stable Tools
 
 ### Semantic Navigation (Roslyn-powered)
 | Tool | Description |
@@ -78,6 +78,7 @@ MCP AI Server bridges this gap by exposing IntelliSense-level intelligence and t
 | `ExecuteAsyncTest` | Run tests asynchronously with real-time status |
 | `GetSolutionTree` | Solution and project structure |
 | `GetProjectReferences` | Project dependency graph |
+| `LoadSolution` | Open a .sln/.slnx file — server stays on the same port |
 | `TranslatePath` | Convert paths between Windows and WSL formats |
 
 ### Editor Integration
