@@ -157,6 +157,10 @@ Works with any MCP-compatible AI tool:
 
 ---
 
+## Hosted deployment
+
+A hosted deployment is available on [Fronteir AI](https://fronteir.ai/mcp/ladislavsopko-mcp-ai-server-visual-studio).
+
 ## Quick Start
 
 1. **[Install](https://marketplace.visualstudio.com/items?itemName=LadislavSopko.mcpserverforvs)** from Visual Studio Marketplace
