@@ -161,8 +161,9 @@ Works with any MCP-compatible AI tool:
 
 1. **[Install](https://marketplace.visualstudio.com/items?itemName=LadislavSopko.mcpserverforvs)** from Visual Studio Marketplace
 2. **Open** your .NET solution in Visual Studio
-3. **Configure port** in MCP Server Settings (default: 3010)
-4. **Add to your MCP client:**
+3. **Configure port** in MCP Server Settings (default: 3010), Tools-> MCP Server-> Global Settings
+4. **Start MCP server** In Visual Studio, Tools-> MCP Server-> Start Server
+5. **Add to your MCP client:**
 
 ```json
 "vs-mcp": {
